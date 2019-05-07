@@ -20,15 +20,19 @@ namespace ETstrikesBack
         public Rectangle rectangle;
         public Canvas canvas;
         public Point pos = new Point(285, 500);
-        int pSpeed = 4;
-        public Player(Rectangle r, Canvas c)
+        public int pSpeed = 4;
+        public Player(Canvas c)
         {
-            rectangle = r;
             canvas = c;
+        }
+
+        public void pDraw()
+        {
+            rectangle = new Rectangle();
             rectangle.Height = 30;
             rectangle.Width = 30;
             rectangle.Fill = Brushes.Blue;
-            c.Children.Add(r);
+            canvas.Children.Add(rectangle);
         }
 
         public void pMovement()
